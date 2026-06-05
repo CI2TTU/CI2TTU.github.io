@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://ci2ttu.github.io/sitemap.xml
