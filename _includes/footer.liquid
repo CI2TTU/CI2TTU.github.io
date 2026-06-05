@@ -1,0 +1,58 @@
+{% capture footer_contents %}
+  &copy; Copyright {{ site.time | date: '%Y' }}
+  {{ site.first_name }}
+  {{ site.middle_name }}
+  {{ site.last_name }}. {{ site.footer_text }}
+  {% if site.impressum_path %}
+    <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
+  {% endif %}
+  {% if site.last_updated %}
+    Last updated: {{ 'now' | date: '%B %d, %Y' }}.
+  {% endif %}
+{% endcapture %}
+
+{% if site.footer_fixed %}
+  <footer class="fixed-bottom" role="contentinfo">
+    <div class="container mt-0">
+      {{ footer_contents }}
+    </div>
+  </footer>
+{% else %}
+  <footer class="sticky-bottom mt-5" role="contentinfo">
+    {% if site.newsletter.enabled %}
+      {% if site.plugins contains 'al_newsletter' %}
+        {% include plugins/al_newsletter_form_center.liquid %}
+      {% else %}
+        {% include newsletter.liquid %}
+      {% endif %}
+    {% endif %}
+
+    {%- comment -%} CI² Lab institutional affiliation logo (CS dept lockup already includes the Double-T) {%- endcomment -%}
+    <div class="container ci2-footer-logos">
+      <a href="https://www.depts.ttu.edu/cs/" target="_blank" rel="noopener" aria-label="TTU Department of Computer Science">
+        <img src="{{ '/assets/img/cs-dept.png' | relative_url }}" alt="Texas Tech University — Department of Computer Science" class="ci2-logo-cs" loading="lazy" />
+      </a>
+    </div>
+
+    <div class="container">
+      {{ footer_contents }}
+    </div>
+  </footer>
+  <style>
+    .ci2-footer-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      padding: 1.5rem 1rem 0.5rem;
+    }
+    .ci2-footer-logos img { width: auto; opacity: 0.92; }
+    .ci2-footer-logos .ci2-logo-cs { height: 130px; max-width: 100%; }
+    @media (max-width: 575px) { .ci2-footer-logos .ci2-logo-cs { height: 96px; } }
+    /* In dark mode the full-color logos sit on a white chip so brand colors stay correct and legible */
+    html[data-theme="dark"] .ci2-footer-logos img {
+      background: #ffffff; padding: 0.45rem 0.7rem; border-radius: 0.5rem; opacity: 1;
+    }
+  </style>
+{% endif %}

@@ -1,0 +1,48 @@
+# Lab members, rendered by _pages/people.md.
+# Add/remove people here — the People page updates automatically.
+#
+# Per-person fields (all optional except name & image):
+#   name, title, role, image (in assets/img/), email, website, linkedin, scholar, github
+# A link icon only appears when its field is filled in.
+# Add each member's personal website URL under `website:` where available.
+
+faculty:
+  - name: Dr. Stas Tiomkin
+    title: Principal Investigator
+    role: Assistant Professor, Computer Science
+    image: stas.jpg
+    email: stas.tiomkin@ttu.edu
+    website: https://www.depts.ttu.edu/cs/faculty/Stas_tiomkin/stastiomkin.php
+    linkedin: https://www.linkedin.com/in/stas-tiomkin-97928119/
+
+phd:
+  - name: Noam Smilovich
+    title: PhD Student
+    role: Computer Science
+    image: noam.jpg
+    email: Noam.Smilovich@ttu.edu
+    website: https://noamsmilovich.github.io
+  - name: Tristan Shah
+    title: PhD Student
+    role: Computer Science
+    image: tristan.jpg
+    email: trisshah@ttu.edu
+    website:
+  - name: Wooyoung Chung
+    title: PhD Student
+    role: Computer Science
+    image: wooyoung.jpg
+    email: wochung@ttu.edu
+    website:
+  - name: Joshua Huang
+    title: PhD Student
+    role: Computer Science
+    image: joshua.jpg
+    email: Joshua.Huang@ttu.edu
+    website:
+  - name: Volodymyr Makarenko
+    title: PhD Student
+    role: Computer Science
+    image: volodymyr.jpg
+    email: vmakaren@ttu.edu
+    website:
