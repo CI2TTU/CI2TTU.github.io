@@ -16,6 +16,10 @@ nav: false
       <strong>information theory</strong>.
     </p>
   </section>
+
+  <figure class="ci2-home-photo">
+    {% include figure.liquid path="assets/img/gallery/group.jpg" class="ci2-home-img" sizes="(max-width: 575px) 95vw, 54rem" %}
+  </figure>
 </div>
 
 <style>
@@ -41,5 +45,13 @@ nav: false
   @media (max-width: 575px) {
     .ci2-hero { padding: 2.5rem 0 2rem; }
     .ci2-lede { font-size: 1.2rem; }
+  }
+
+  .ci2-home-photo { margin: 0 auto; max-width: 54rem; }
+  .ci2-home-photo .ci2-home-img,
+  .ci2-home-photo img {
+    width: 100%; height: auto; display: block;
+    border-radius: 0.8rem;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.14);
   }
 </style>
