@@ -10,6 +10,9 @@
   html[data-theme="light"] { --global-theme-color: #cc0000; --global-hover-color: #cc0000; }
   html[data-theme="dark"]  { --global-theme-color: #e8473c; --global-hover-color: #e8473c; }
 
+  /* Prevent horizontal overflow / scroll on small screens */
+  html, body { overflow-x: hidden; max-width: 100%; }
+
   /* Global type scale-up — this include loads on every page */
   html { font-size: 18px; }
   @media (min-width: 1200px) { html { font-size: 18.5px; } }
@@ -84,8 +87,22 @@
   }
 
   @media (max-width: 575px) {
-    .ci2-stage { padding: 2.5rem 1rem 3rem; min-height: 82vh; }
-    .ci2-lede { font-size: 1.15rem; }
+    /* Fit the whole logo to the screen width (cover would zoom & crop it) */
+    .ci2-stage {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      background-size: contain;
+      background-position: center bottom;
+      padding: 2rem 0.5rem 1.5rem;
+      min-height: 88vh;
+      overflow-x: hidden;
+    }
+    .ci2-stage-inner { max-width: 100%; }
+    .ci2-stage-inner > * { overflow-wrap: break-word; }
+    .ci2-eyebrow { font-size: 0.72rem; letter-spacing: 0.08em; }
+    .ci2-title { font-size: 1.45rem; }
+    .ci2-lede { font-size: 1.05rem; }
   }
 </style> </article> </div> </div> <footer class="sticky-bottom mt-5" role="contentinfo"> <div class="container ci2-footer-logos"> <a href="https://www.depts.ttu.edu/cs/" target="_blank" rel="noopener" aria-label="TTU Department of Computer Science"> <img src="/assets/img/cs-dept.png" alt="Texas Tech University — Department of Computer Science" class="ci2-logo-cs" loading="lazy"> </a> </div> <div class="container"> © Copyright 2026 CI² Lab. Department of Computer Science, Texas Tech University. </div> </footer> <style>
     .ci2-footer-logos {
