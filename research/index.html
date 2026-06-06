@@ -39,9 +39,16 @@
     .navbar .ci2-brand { font-size: 3.1rem; }
   }
 
-  /* Navbar logo image (preview alternative to the text wordmark) */
+  /* Navbar logo image (hidden on home; shown on other pages) */
   .navbar .ci2-brand .ci2-logo-img { height: 5rem; width: auto; display: block; }
   @media (min-width: 576px) { .navbar .ci2-brand .ci2-logo-img { height: 7rem; } }
+
+  /* Home page: no brand logo, so center and slightly enlarge the nav tabs */
+  .ci2-home-navbar .navbar-collapse-main { justify-content: center; }
+  .ci2-home-navbar .navbar-menu-list { margin-left: 0; }
+  @media (min-width: 576px) {
+    .ci2-home-navbar .navbar-nav .nav-item .nav-link { font-size: 1.18rem; }
+  }
 </style> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Research</h1> <p class="post-description">Research in the Computational Intelligence, Control &amp; Information (CI²) Lab.</p> </header> <article> <div class="ci2-research"> <p class="ci2-research-intro"> The CI² Lab develops principled, learning-based methods for perceiving and controlling complex dynamical systems. Our work draws on deep learning, reinforcement learning, optimal control, and information theory, combining theory with large-scale experimentation. </p> <section class="ci2-research-area"> <h2>Deep Learning for Control</h2> <p> A central theme of the lab is learning to control dynamical systems directly from data. We develop deep model-based and model-free reinforcement learning methods that learn predictive models of an environment and use them to plan and act — with an emphasis on sample efficiency, stability, and transfer to real physical systems. </p> </section> <section class="ci2-research-area"> <h2>Information Theory of Perception &amp; Control</h2> <p> We study the information-theoretic principles that govern how an agent should perceive its environment and choose actions. This includes intrinsic motivation, empowerment, and the fundamental trade-offs between information acquisition and control performance. </p> </section> <section class="ci2-research-area"> <h2>Representation Learning for Dynamical Systems</h2> <p> How should an agent represent a high-dimensional, partially observed world so that it can predict and act effectively? We develop representation-learning methods that capture the underlying structure of dynamical systems, supporting downstream prediction, planning, and control. </p> </section> <p class="ci2-research-footnote"> Interested in working on these problems? See the <a href="/people/">people</a> page and our <a href="/publications/">publications</a>, or <a href="mailto:stas.tiomkin@ttu.edu">get in touch</a>. </p> </div> <style>
   .ci2-research { max-width: 48rem; margin: 0 auto; }
   .ci2-research-intro { font-size: 1.12rem; line-height: 1.7; opacity: 0.9; margin-bottom: 2.25rem; }
