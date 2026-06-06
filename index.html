@@ -1,10 +1,15 @@
 <!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> CI² Lab </title> <meta name="author" content="CI² Lab"> <meta name="description" content="The Computational Intelligence, Control &amp; Information (CI²) Lab at Texas Tech University, led by Dr. Stas Tiomkin — research at the intersection of deep learning, reinforcement learning, control, and information theory for intelligent dynamical systems. "> <meta name="keywords" content="deep learning, reinforcement learning, optimal control, information theory, dynamical systems, robotics, Texas Tech University, CI2 Lab, Stas Tiomkin"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
   :root {
-    --max-content-width: 930px;
+    --max-content-width: 1000px;
   }
 </style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%A7%A0&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://ci2ttu.github.io/"> <script src="/assets/js/theme.js?v=7af685e2ba20b37fef545c97b8064050"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
     initTheme();
   </script> </head> <body class="fixed-top-nav sticky-bottom-footer"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand ci2-brand" href="/">CI<sup>2</sup> Lab</a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/about/">About </a> </li> <li class="nav-item "> <a class="nav-link" href="/research/">Research </a> </li> <li class="nav-item "> <a class="nav-link" href="/people/">People </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">Publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/news/">News </a> </li> <li class="nav-item "> <a class="nav-link" href="/gallery/">Gallery </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header><style>
+  /* TTU scarlet accent — override al-folio's default purple (light) / cyan (dark) */
+  :root,
+  html[data-theme="light"] { --global-theme-color: #cc0000; --global-hover-color: #cc0000; }
+  html[data-theme="dark"]  { --global-theme-color: #e8473c; --global-hover-color: #e8473c; }
+
   /* Global type scale-up — this include loads on every page */
   html { font-size: 18px; }
   @media (min-width: 1200px) { html { font-size: 18.5px; } }
@@ -33,37 +38,43 @@
   @media (min-width: 576px) {
     .navbar .ci2-brand { font-size: 3.1rem; }
   }
-</style> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Home</h1> <p class="post-description"></p> </header> <article> <div class="ci2-home"> <section class="ci2-hero"> <p class="ci2-eyebrow">Texas Tech University · Department of Computer Science</p> <h1 class="ci2-title">Computational Intelligence,<br>Control &amp; Information Lab</h1> <p class="ci2-lede"> We study how intelligent agents learn to perceive, predict, and control complex dynamical systems — at the intersection of <strong>deep learning</strong>, <strong>reinforcement learning</strong>, <strong>optimal control</strong>, and <strong>information theory</strong>. </p> </section> <figure class="ci2-home-photo"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/gallery/group-480.webp 480w,/assets/img/gallery/group-800.webp 800w,/assets/img/gallery/group-1400.webp 1400w," type="image/webp" sizes="(max-width: 575px) 95vw, 54rem"></source> <img src="/assets/img/gallery/group.jpg" class="ci2-home-img" width="100%" height="auto" loading="lazy" onerror="this.onerror=null; document.querySelectorAll('.responsive-img-srcset').forEach(function (n) { n.remove(); });"> </picture> </figure> </figure> </div> <style>
-  /* Home is a custom hero — hide the default page title/description header */
+</style> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Home</h1> <p class="post-description"></p> </header> <article> <div class="ci2-stage"> <div class="ci2-stage-inner"> <p class="ci2-eyebrow">Texas Tech University · Department of Computer Science</p> <h1 class="ci2-title">Computational Intelligence,<br>Control &amp; Information Lab</h1> <p class="ci2-lede"> We study how intelligent agents learn to perceive, predict, and control complex dynamical systems — at the intersection of <strong>deep learning</strong>, <strong>reinforcement learning</strong>, <strong>optimal control</strong>, and <strong>information theory</strong>. </p> </div> </div> <style>
+  /* Full-bleed hero. The image is TRANSPARENT (red nebula + CI² + robot), so the
+     page background shows through: white in light mode, dark in dark mode. */
   .post > .post-header { display: none; }
+  .post, .post > article { overflow: visible; }
 
-  .ci2-home { max-width: 54rem; margin: 0 auto; }
+  .ci2-stage {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-top: -2.5rem;
+    background: transparent url("/assets/img/hero-home.webp") center center / cover no-repeat;
+    min-height: 88vh;
+    display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+    padding: 3.5rem 1.25rem 4rem;
+  }
+  .ci2-stage-inner { max-width: 50rem; margin: 0 auto; text-align: center; }
 
-  .ci2-hero { text-align: center; padding: 4rem 0 3rem; }
+  /* Theme-adaptive text colour (dark on white, light on dark) */
   .ci2-eyebrow {
-    text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.9rem;
-    font-weight: 600; opacity: 0.7; margin-bottom: 1rem;
+    text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.92rem;
+    font-weight: 600; opacity: 0.85; margin-bottom: 1rem;
+    color: var(--global-text-color);
   }
   .ci2-title {
     font-family: "Roboto Slab", serif; font-weight: 700;
-    font-size: clamp(1.7rem, 5vw, 3.4rem); line-height: 1.15; margin: 0 0 1.5rem;
-    text-wrap: balance;
+    font-size: clamp(1.8rem, 5vw, 3.3rem); line-height: 1.15; margin: 0 0 1.25rem;
+    color: var(--global-text-color); text-wrap: balance;
   }
   .ci2-lede {
-    font-size: 1.4rem; line-height: 1.7; max-width: 46rem;
-    margin: 0 auto; opacity: 0.9;
-  }
-  @media (max-width: 575px) {
-    .ci2-hero { padding: 2.5rem 0 2rem; }
-    .ci2-lede { font-size: 1.2rem; }
+    font-size: 1.32rem; line-height: 1.7; max-width: 42rem; margin: 0 auto;
+    color: var(--global-text-color);
   }
 
-  .ci2-home-photo { margin: 0 auto; max-width: 54rem; }
-  .ci2-home-photo .ci2-home-img,
-  .ci2-home-photo img {
-    width: 100%; height: auto; display: block;
-    border-radius: 0.8rem;
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.14);
+  @media (max-width: 575px) {
+    .ci2-stage { padding: 2.5rem 1rem 3rem; min-height: 82vh; }
+    .ci2-lede { font-size: 1.15rem; }
   }
 </style> </article> </div> </div> <footer class="sticky-bottom mt-5" role="contentinfo"> <div class="container ci2-footer-logos"> <a href="https://www.depts.ttu.edu/cs/" target="_blank" rel="noopener" aria-label="TTU Department of Computer Science"> <img src="/assets/img/cs-dept.png" alt="Texas Tech University — Department of Computer Science" class="ci2-logo-cs" loading="lazy"> </a> </div> <div class="container"> © Copyright 2026 CI² Lab. Department of Computer Science, Texas Tech University. </div> </footer> <style>
     .ci2-footer-logos {
@@ -122,7 +133,7 @@ ninja.data = [{
           },
         },{id: "nav-publications",
           title: "Publications",
-          description: "Publications by category, in reverse chronological order.",
+          description: "Preprints and selected publications from the CI² Lab.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
