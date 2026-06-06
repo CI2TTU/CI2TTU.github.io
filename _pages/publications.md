@@ -39,6 +39,10 @@ nav_order: 4
     .publications ol.bibliography .col-sm-8 { flex: 0 0 76%; max-width: 76%; }
   }
 
+  /* Links relocated under the venue badge: space them out and let them wrap */
+  .publications ol.bibliography .abbr .links { margin-top: 0.6rem; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .publications ol.bibliography .abbr .links a.btn { margin: 0; }
+
   /* Make the venue badge a clean, readable pill — a touch taller and roomier */
   .publications .abbr abbr {
     padding: 0.3rem 0.6rem;

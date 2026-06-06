@@ -3,7 +3,7 @@
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
       {%- comment -%} CI² Lab: word-mark brand, styled & always visible, links to Home {%- endcomment -%}
-      <a class="navbar-brand ci2-brand" href="{{ '/' | relative_url }}">CI<sup>2</sup>&nbsp;Lab</a>
+      <a class="navbar-brand ci2-brand" href="{{ '/' | relative_url }}"><img src="{{ '/assets/img/logo-ci2.png' | relative_url }}" alt="CI² Lab" class="ci2-logo-img"></a>
       <!-- Navbar Toggle -->
       <button
         class="navbar-toggler collapsed navbar-toggler-main"
@@ -151,4 +151,8 @@
   @media (min-width: 576px) {
     .navbar .ci2-brand { font-size: 3.1rem; }
   }
+
+  /* Navbar logo image (preview alternative to the text wordmark) */
+  .navbar .ci2-brand .ci2-logo-img { height: 5rem; width: auto; display: block; }
+  @media (min-width: 576px) { .navbar .ci2-brand .ci2-logo-img { height: 7rem; } }
 </style>
