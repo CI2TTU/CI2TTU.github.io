@@ -53,7 +53,21 @@ nav: false
   }
 
   @media (max-width: 575px) {
-    .ci2-stage { padding: 2.5rem 1rem 3rem; min-height: 82vh; }
-    .ci2-lede { font-size: 1.15rem; }
+    /* Fit the whole logo to the screen width (cover would zoom & crop it) */
+    .ci2-stage {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      background-size: contain;
+      background-position: center bottom;
+      padding: 2rem 0.5rem 1.5rem;
+      min-height: 88vh;
+      overflow-x: hidden;
+    }
+    .ci2-stage-inner { max-width: 100%; }
+    .ci2-stage-inner > * { overflow-wrap: break-word; }
+    .ci2-eyebrow { font-size: 0.72rem; letter-spacing: 0.08em; }
+    .ci2-title { font-size: 1.45rem; }
+    .ci2-lede { font-size: 1.05rem; }
   }
 </style>
