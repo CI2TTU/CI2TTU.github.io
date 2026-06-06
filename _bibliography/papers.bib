@@ -2,23 +2,181 @@
 ---
 
 @comment{
-  CI² Lab publications. Add real entries below.
+  CI² Lab publications, rendered on the Publications page:
+    - preprint={true}  -> "Preprints" section
+    - selected={true}  -> "Selected Publications" section
+  abbr={...} is the short venue badge shown beside each entry (keep it readable).
+  Preprints verified on arXiv; selected list from the PI's CV (Sep 2025) + Google Scholar.
+}
 
-  Useful (optional) al-folio fields per entry:
-    abbr={Venue}, selected={true} (shows on the homepage), abstract={...},
-    pdf={file-or-url}, arxiv={id}, code={url}, html={url}, bibtex_show={true},
-    preview={image-in-assets/img/publication_preview/}
+% ---------------------------------------------------------------------------
+% Preprints
+% ---------------------------------------------------------------------------
 
-  Example (delete and replace with your own):
+@misc{shah2026multiagent,
+  title         = {Multi-Agent Empowerment and Emergence of Complex Behavior in Groups},
+  author        = {Shah, Tristan and Nemenman, Ilya and Polani, Daniel and Tiomkin, Stas},
+  year          = {2026},
+  eprint        = {2604.21155},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  arxiv         = {2604.21155},
+  preprint      = {true},
+  abbr          = {arXiv},
+}
 
-  @inproceedings{lastname2025example,
-    title       = {A Great Paper on Learning to Control},
-    author      = {Smilovich, Noam and Tiomkin, Stas},
-    booktitle   = {Proceedings of Some Conference},
-    year        = {2025},
-    abbr        = {ConfAbbr},
-    selected    = {true},
-    bibtex_show = {true},
-    arxiv       = {0000.00000},
-  }
+@misc{shah2026controllable,
+  title         = {Emergence of Physical Intelligence via Controllable Information Production},
+  author        = {Shah, Tristan and Tiomkin, Stas},
+  year          = {2026},
+  eprint        = {2601.22449},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  arxiv         = {2601.22449},
+  preprint      = {true},
+  abbr          = {arXiv},
+}
+
+@misc{warner2025latent,
+  title         = {Latent Generative Modeling of Random Fields from Limited Training Data},
+  author        = {Warner, James E. and Shah, Tristan A. and Leser, Patrick E. and Bomarito, Geoffrey F. and Pribe, Joshua D. and Stanley, Michael C.},
+  year          = {2025},
+  eprint        = {2505.13007},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  arxiv         = {2505.13007},
+  preprint      = {true},
+  abbr          = {arXiv},
+}
+
+% ---------------------------------------------------------------------------
+% Selected Publications
+% ---------------------------------------------------------------------------
+
+@article{amir2025goals,
+  title    = {Goals and the Structure of Experience},
+  author   = {Amir, Nadav and Tiomkin, Stas and Langdon, Angela},
+  journal  = {Philosophical Transactions of the Royal Society A},
+  year     = {2025},
+  selected = {true},
+  abbr     = {Royal Society},
+}
+
+@article{tiomkin2025process,
+  title    = {Process Empowerment for Robust Intrinsic Motivation},
+  author   = {Tiomkin, Stas and Salge, Christoph and Polani, Daniel},
+  journal  = {Journal of Physics: Complexity},
+  year     = {2025},
+  selected = {true},
+  abbr     = {J. Phys. Complexity},
+}
+
+@inproceedings{adamczyk2025bootstrapped,
+  title     = {Bootstrapped Reward Shaping},
+  author    = {Adamczyk, Jacob and Makarenko, Volodymyr and Tiomkin, Stas and Kulkarni, Rahul V.},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)},
+  year      = {2025},
+  selected  = {true},
+  abbr      = {AAAI},
+}
+
+@inproceedings{nguyen2025suple,
+  title     = {SuPLE: Robot Learning with Lyapunov Rewards},
+  author    = {Nguyen, Phu and Polani, Daniel and Tiomkin, Stas},
+  booktitle = {IEEE International Conference on Robotics and Automation (ICRA)},
+  year      = {2025},
+  selected  = {true},
+  abbr      = {ICRA},
+}
+
+@inproceedings{shah2025acoustic,
+  title     = {Acoustic Wave Manipulation Through Sparse Robotic Actuation},
+  author    = {Shah, Tristan and Smilovich, Noam and Gerges, S. and Amirkulova, Feruza and Tiomkin, Stas},
+  booktitle = {IEEE International Conference on Robotics and Automation (ICRA)},
+  year      = {2025},
+  selected  = {true},
+  abbr      = {ICRA},
+  html      = {https://ieeexplore.ieee.org/abstract/document/11128588},
+}
+
+@article{tiomkin2024intrinsic,
+  title           = {Intrinsic Motivation in Dynamical Control Systems},
+  author          = {Tiomkin, Stas and Nemenman, Ilya and Polani, Daniel and Tishby, Naftali},
+  journal         = {PRX Life},
+  year            = {2024},
+  selected        = {true},
+  abbr            = {PRX Life},
+  additional_info = {Selected as one of five spotlight papers; featured at the Global Physics Summit, March 2025.},
+}
+
+@inproceedings{adamczyk2023bounding,
+  title     = {Bounding the Optimal Value Function in Compositional Reinforcement Learning},
+  author    = {Adamczyk, Jacob and Makarenko, Volodymyr and Arriojas, Argenis and Tiomkin, Stas and Kulkarni, Rahul V.},
+  booktitle = {Conference on Uncertainty in Artificial Intelligence (UAI)},
+  year      = {2023},
+  selected  = {true},
+  abbr      = {UAI},
+}
+
+@inproceedings{arriojas2023bayesian,
+  title     = {Bayesian Inference Approach for Entropy Regularized Reinforcement Learning with Stochastic Dynamics},
+  author    = {Arriojas, Argenis and Adamczyk, Jacob and Tiomkin, Stas and Kulkarni, Rahul V.},
+  booktitle = {Conference on Uncertainty in Artificial Intelligence (UAI)},
+  year      = {2023},
+  selected  = {true},
+  abbr      = {UAI},
+}
+
+@inproceedings{adamczyk2023utilizing,
+  title     = {Utilizing Prior Solutions for Reward Shaping and Composition in Entropy-Regularized Reinforcement Learning},
+  author    = {Adamczyk, Jacob and Arriojas, Argenis and Tiomkin, Stas and Kulkarni, Rahul V.},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)},
+  year      = {2023},
+  selected  = {true},
+  abbr      = {AAAI},
+}
+
+@article{arriojas2023entropy,
+  title    = {Entropy Regularized Reinforcement Learning Using Large Deviation Theory},
+  author   = {Arriojas, Argenis and Adamczyk, Jacob and Tiomkin, Stas and Kulkarni, Rahul V.},
+  journal  = {Physical Review Research},
+  year     = {2023},
+  selected = {true},
+  abbr     = {Phys. Rev. Research},
+}
+
+@inproceedings{wray2022multiobjective,
+  title     = {Multi-Objective Policy Gradients with Topological Constraints},
+  author    = {Wray, Kyle Hollins and Tiomkin, Stas and Kochenderfer, Mykel J. and Abbeel, Pieter},
+  booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year      = {2022},
+  selected  = {true},
+  abbr      = {IROS},
+}
+
+@inproceedings{zhao2021efficient,
+  title     = {Efficient Empowerment Estimation for Unsupervised Stabilization},
+  author    = {Zhao, Ruihan and Lu, Kevin and Abbeel, Pieter and Tiomkin, Stas},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2021},
+  selected  = {true},
+  abbr      = {ICLR},
+}
+
+@inproceedings{du2020ave,
+  title     = {AvE: Assistance via Empowerment},
+  author    = {Du, Yuqing and Tiomkin, Stas and Kiciman, Emre and Polani, Daniel and Abbeel, Pieter and Dragan, Anca},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2020},
+  selected  = {true},
+  abbr      = {NeurIPS},
+}
+
+@inproceedings{tiomkin2015pastfuture,
+  title     = {Past-Future Information Bottleneck for Linear Feedback Systems},
+  author    = {Tiomkin, Stas and Amir, Nadav and Tishby, Naftali},
+  booktitle = {54th IEEE Conference on Decision and Control (CDC)},
+  year      = {2015},
+  selected  = {true},
+  abbr      = {CDC},
 }

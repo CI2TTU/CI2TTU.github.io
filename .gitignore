@@ -15,3 +15,10 @@ node_modules/
 output/playwright/
 test-results/
 vendor
+
+# Private files — never commit (PI CV, etc.)
+/CV*.pdf
+CVSep2025.pdf
+
+# Hero image previews (not for commit)
+hero-options/

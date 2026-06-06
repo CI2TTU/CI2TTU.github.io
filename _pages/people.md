@@ -7,8 +7,8 @@ nav_order: 3
 description: Members of the Computational Intelligence, Control &amp; Information (CI²) Lab.
 ---
 
-{% assign people_groups = "faculty,phd" | split: "," %}
-{% assign group_titles = "Faculty,PhD Students" | split: "," %}
+{% assign people_groups = "faculty,phd,undergrad" | split: "," %}
+{% assign group_titles = "Faculty,PhD Students,Undergraduate Students" | split: "," %}
 
 <div class="ci2-people">
 {% for group in people_groups %}

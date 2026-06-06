@@ -118,6 +118,11 @@
 
 {%- comment -%} CI² Lab brand styling {%- endcomment -%}
 <style>
+  /* TTU scarlet accent — override al-folio's default purple (light) / cyan (dark) */
+  :root,
+  html[data-theme="light"] { --global-theme-color: #cc0000; --global-hover-color: #cc0000; }
+  html[data-theme="dark"]  { --global-theme-color: #e8473c; --global-hover-color: #e8473c; }
+
   /* Global type scale-up — this include loads on every page */
   html { font-size: 18px; }
   @media (min-width: 1200px) { html { font-size: 18.5px; } }

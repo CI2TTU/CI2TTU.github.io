@@ -46,3 +46,11 @@ phd:
     image: volodymyr.jpg
     email: vmakaren@ttu.edu
     website:
+
+undergrad:
+  - name: Diwash Thapa
+    title: Undergraduate Student
+    role: Computer Science
+    image: diwash.jpg
+    email: Diwthapa@ttu.edu
+    website: https://diwashthapa.netlify.app
