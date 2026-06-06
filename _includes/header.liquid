@@ -1,9 +1,11 @@
 <header>
   <!-- Nav Bar -->
-  <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
+  <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}{% if page.url == '/' %} ci2-home-navbar{% endif %}" role="navigation">
     <div class="container">
-      {%- comment -%} CI² Lab: word-mark brand, styled & always visible, links to Home {%- endcomment -%}
+      {%- comment -%} CI² Lab brand logo — hidden on the home page (the hero already shows it) {%- endcomment -%}
+      {% if page.url != '/' %}
       <a class="navbar-brand ci2-brand" href="{{ '/' | relative_url }}"><img src="{{ '/assets/img/logo-ci2.png' | relative_url }}" alt="CI² Lab" class="ci2-logo-img"></a>
+      {% endif %}
       <!-- Navbar Toggle -->
       <button
         class="navbar-toggler collapsed navbar-toggler-main"
@@ -152,7 +154,14 @@
     .navbar .ci2-brand { font-size: 3.1rem; }
   }
 
-  /* Navbar logo image (preview alternative to the text wordmark) */
+  /* Navbar logo image (hidden on home; shown on other pages) */
   .navbar .ci2-brand .ci2-logo-img { height: 5rem; width: auto; display: block; }
   @media (min-width: 576px) { .navbar .ci2-brand .ci2-logo-img { height: 7rem; } }
+
+  /* Home page: no brand logo, so center and slightly enlarge the nav tabs */
+  .ci2-home-navbar .navbar-collapse-main { justify-content: center; }
+  .ci2-home-navbar .navbar-menu-list { margin-left: 0; }
+  @media (min-width: 576px) {
+    .ci2-home-navbar .navbar-nav .nav-item .nav-link { font-size: 1.18rem; }
+  }
 </style>
