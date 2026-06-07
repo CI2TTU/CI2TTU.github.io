@@ -50,7 +50,11 @@
       {% endif %}
       {% if entry.html %}
         {% if entry.html contains '://' %}
-          <a href="{{ entry.html }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
+          {%- comment -%} Label external links by publisher when we can recognize the host {%- endcomment -%}
+          {% assign html_label = 'HTML' %}
+          {% if entry.html contains 'ieee' %}{% assign html_label = 'IEEE' %}
+          {% elsif entry.html contains 'mlr.press' or entry.html contains 'pmlr' %}{% assign html_label = 'PMLR' %}{% endif %}
+          <a href="{{ entry.html }}" class="btn btn-sm z-depth-0" role="button">{{ html_label }}</a>
         {% else %}
           <a href="{{ entry.html | prepend: '/assets/html/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
         {% endif %}
@@ -394,3 +398,34 @@
     {% endif %}
   </div>
 </div>
+
+{%- comment -%} Demo videos as a margin panel: sibling of .row inside the auto-generated <li>.
+   Driven by _data/pub_videos.yml; sets alternate sides automatically by their order
+   there (even index → left, odd → right). Solo sets render larger, pairs side-by-side. {%- endcomment -%}
+{% if site.data.pub_videos %}
+  {% assign vid_index = 0 %}
+  {% assign vid_found = false %}
+  {% for vset in site.data.pub_videos %}
+    {% if vset[0] == entry.key %}
+      {% assign vid_found = true %}
+      {% assign vid_list = vset[1] %}
+      {% break %}
+    {% endif %}
+    {% assign vid_index = vid_index | plus: 1 %}
+  {% endfor %}
+  {% if vid_found %}
+    {% assign vid_side = 'right' %}
+    {% assign vid_parity = vid_index | modulo: 2 %}
+    {% if vid_parity == 0 %}{% assign vid_side = 'left' %}{% endif %}
+    {% assign vid_count = vid_list | size %}
+    {% assign vid_kind = 'pair' %}
+    {% if vid_count == 1 %}{% assign vid_kind = 'solo' %}{% endif %}
+    <div class="ci2-pub-media ci2-pub-media--{{ vid_side }} ci2-pub-media--{{ vid_kind }}">
+      {% for v in vid_list %}
+        <video class="ci2-pub-video" controls autoplay muted loop playsinline preload="metadata" poster="{{ v | prepend: '/assets/video/' | append: '.jpg' | relative_url }}">
+          <source src="{{ v | prepend: '/assets/video/' | append: '.mp4' | relative_url }}" type="video/mp4">
+        </video>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endif %}

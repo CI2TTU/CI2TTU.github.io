@@ -4,50 +4,75 @@ title: Research
 permalink: /research/
 nav: true
 nav_order: 2
-description: Research in the Computational Intelligence, Control &amp; Information (CI²) Lab.
 ---
 
 <div class="ci2-research">
 
 <p class="ci2-research-intro">
-The CI² Lab develops principled, learning-based methods for perceiving and controlling
-complex dynamical systems. Our work draws on deep learning, reinforcement learning,
-optimal control, and information theory, combining theory with large-scale experimentation.
+We build agents that learn to perceive, act, and acquire skills in complex physical systems —
+uniting reinforcement learning, control and dynamical-systems theory, and information theory,
+with <strong>intrinsic motivation</strong> as a recurring thread.
 </p>
 
 <section class="ci2-research-area">
-  <h2>Deep Learning for Control</h2>
+  <h2>Intrinsic Motivation &amp; Empowerment</h2>
   <p>
-  A central theme of the lab is learning to control dynamical systems directly from data.
-  We develop deep model-based and model-free reinforcement learning methods that learn
-  predictive models of an environment and use them to plan and act — with an emphasis on
-  sample efficiency, stability, and transfer to real physical systems.
+  Information-theoretic objectives — empowerment, channel capacity, and the value of information —
+  that drive agents to discover useful, generalizable behavior without hand-engineered rewards,
+  including intrinsic motivation realized through deep reinforcement learning.
   </p>
 </section>
 
 <section class="ci2-research-area">
-  <h2>Information Theory of Perception &amp; Control</h2>
+  <h2>Information-Theoretic Perception &amp; Control</h2>
   <p>
-  We study the information-theoretic principles that govern how an agent should perceive its
-  environment and choose actions. This includes intrinsic motivation, empowerment, and the
-  fundamental trade-offs between information acquisition and control performance.
+  The fundamental limits of perceiving and controlling dynamical systems: how much information an
+  agent must acquire and retain in order to act, studied through information-bottleneck and
+  channel-capacity analyses of closed-loop feedback.
   </p>
 </section>
 
 <section class="ci2-research-area">
-  <h2>Representation Learning for Dynamical Systems</h2>
+  <h2>Robot Learning &amp; Skill Acquisition</h2>
   <p>
-  How should an agent represent a high-dimensional, partially observed world so that it can
-  predict and act effectively? We develop representation-learning methods that capture the
-  underlying structure of dynamical systems, supporting downstream prediction, planning, and control.
+  Learning controllable skills on real physical systems — manipulation, locomotion, and sparse
+  robotic actuation — with an emphasis on sample efficiency, stability (Lyapunov-guided learning),
+  and transfer from simulation to hardware.
   </p>
 </section>
 
-<p class="ci2-research-footnote">
-Interested in working on these problems? See the <a href="{{ '/people/' | relative_url }}">people</a>
-page and our <a href="{{ '/publications/' | relative_url }}">publications</a>, or
-<a href="mailto:stas.tiomkin@ttu.edu">get in touch</a>.
-</p>
+<section class="ci2-research-area">
+  <h2>Learning in Contact-Rich Environments</h2>
+  <p>
+  Acting through frequent physical contact — dexterous manipulation, locomotion, and assembly —
+  where intermittent contacts induce hybrid, non-smooth dynamics that challenge standard control
+  and learning, and demand methods that reason about when and how to make contact.
+  </p>
+</section>
+
+<section class="ci2-research-area">
+  <h2>Behavior Synthesis for Dynamical Systems</h2>
+  <p>
+  Synthesizing complex, structured behavior for nonlinear and hybrid dynamical systems by learning
+  predictive, control-aware representations of dynamics that support planning and design.
+  </p>
+</section>
+
+<section class="ci2-research-area">
+  <h2>Emergence &amp; Multi-Agent Intelligence</h2>
+  <p>
+  How coordinated, complex collective behavior emerges in groups of agents from intrinsic
+  objectives, rather than from centralized control or explicit reward design.
+  </p>
+</section>
+
+<section class="ci2-research-area">
+  <h2>Foundations of Reinforcement Learning</h2>
+  <p>
+  The theory behind the applications above: entropy-regularized and average-reward RL, reward
+  shaping and compositionality, and bounds on optimal value functions.
+  </p>
+</section>
 
 </div>
 
@@ -61,9 +86,4 @@ page and our <a href="{{ '/publications/' | relative_url }}">publications</a>, o
     padding-left: 0.9rem; border-left: 3px solid var(--global-theme-color, #b1241f);
   }
   .ci2-research-area p { font-size: 1.02rem; line-height: 1.75; margin: 0; opacity: 0.92; }
-
-  .ci2-research-footnote {
-    margin-top: 2.5rem; padding-top: 1.25rem; font-size: 0.98rem; opacity: 0.85;
-    border-top: 1px solid var(--global-divider-color, #e0e0e0);
-  }
 </style>

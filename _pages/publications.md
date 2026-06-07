@@ -2,7 +2,6 @@
 layout: page
 permalink: /publications/
 title: Publications
-description: Preprints and selected publications from the CI² Lab.
 nav: true
 nav_order: 4
 ---
@@ -25,13 +24,16 @@ nav_order: 4
   }
   .ci2-pub-heading:first-child { margin-top: 0.5rem; }
 
-  /* Clearly separate each publication entry */
+  /* Every publication entry is a card: a bordered, lightly-tinted block with a red
+     left accent, so the page reads as a consistent list of cards. */
   .publications ol.bibliography > li {
-    padding-bottom: 1.1rem;
-    margin-bottom: 1.1rem;
-    border-bottom: 1px solid var(--global-divider-color, #e6e6e6);
+    padding: 1rem 1.25rem; margin-bottom: 1.1rem;
+    border: 1px solid var(--global-divider-color, #e6e6e6);
+    border-left: 4px solid var(--global-theme-color, #cc0000);
+    border-radius: 0.6rem;
+    background: rgba(204, 0, 0, 0.025);
   }
-  .publications ol.bibliography > li:last-child { border-bottom: none; }
+  .publications ol.bibliography > li > .row { margin: 0; }
 
   /* Wider venue-badge column so long venue names fit (we have the horizontal room) */
   @media (min-width: 576px) {
@@ -51,5 +53,28 @@ nav_order: 4
     font-weight: 700;
     letter-spacing: 0.01em;
     line-height: 1.25;
+  }
+
+  /* Papers with demo videos keep the same card, and lay the video(s) out on the
+     right of the bibliographic info. Video on the right; solo larger, pair side-by-side. */
+  .publications ol.bibliography > li:has(.ci2-pub-media) {
+    display: flex; align-items: center; gap: 1.25rem;
+  }
+  .publications ol.bibliography > li:has(.ci2-pub-media) > .row { flex: 1 1 auto; min-width: 0; }
+  .publications ol.bibliography > li:has(.ci2-pub-media) > .ci2-pub-media { flex: 0 0 auto; margin: 0; }
+
+  .ci2-pub-media { display: flex; flex-wrap: nowrap; gap: 0.5rem; }
+  .ci2-pub-media--pair { flex-direction: column; }  /* multiple videos stack vertically */
+  .ci2-pub-media .ci2-pub-video {
+    width: 15rem; height: auto; display: block; background: #000;
+    border-radius: 0.5rem; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Phones: drop the video(s) below the bib info, still inside the card, full width */
+  @media (max-width: 767px) {
+    .publications ol.bibliography > li:has(.ci2-pub-media) {
+      flex-direction: column; align-items: stretch; gap: 0.85rem;
+    }
+    .ci2-pub-media .ci2-pub-video { width: 100%; max-width: 22rem; }
   }
 </style>

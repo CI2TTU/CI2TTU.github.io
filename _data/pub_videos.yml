@@ -1,0 +1,12 @@
+# Demo videos shown in the page margin beside their paper on /publications/.
+# One entry per paper, keyed by its BibTeX cite key; value is the ordered list
+# of video basenames in assets/video/ (expects <name>.mp4 + <name>.jpg poster).
+#
+# Sets alternate margin sides automatically by their order here: the 1st set is
+# on the left, the 2nd on the right, the 3rd left, and so on. A set with a single
+# video renders larger; a set with two renders them side-by-side (so smaller).
+shah2026multiagent:
+  - flock_6
+shah2026controllable:
+  - gibbon
+  - triple_pendulum

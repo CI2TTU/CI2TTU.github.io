@@ -4,7 +4,6 @@ title: People
 permalink: /people/
 nav: true
 nav_order: 3
-description: Members of the Computational Intelligence, Control &amp; Information (CI²) Lab.
 ---
 
 {% assign people_groups = "faculty,phd,undergrad" | split: "," %}
