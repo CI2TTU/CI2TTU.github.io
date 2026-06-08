@@ -38,8 +38,8 @@ nav_order: 3
 
 {% if site.data.alumni %}
   <h2 class="ci2-people-heading">Alumni</h2>
-  {% assign alumni_groups = "thesis,project" | split: "," %}
-  {% assign alumni_titles = "M.Sc. Thesis,M.Sc. Project" | split: "," %}
+  {% assign alumni_groups = "thesis,masters_project,undergrad_project" | split: "," %}
+  {% assign alumni_titles = "M.Sc. Thesis,M.Sc. Project,Undergraduate Project" | split: "," %}
   {% for g in alumni_groups %}
     {% assign alist = site.data.alumni[g] %}
     {% if alist and alist.size > 0 %}
