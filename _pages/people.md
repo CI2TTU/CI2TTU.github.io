@@ -44,11 +44,15 @@ nav_order: 3
     {% assign alist = site.data.alumni[g] %}
     {% if alist and alist.size > 0 %}
       <h3 class="ci2-alumni-subheading">{{ alumni_titles[forloop.index0] }}</h3>
-      <ul class="ci2-alumni-list{% if g != 'thesis' %} ci2-alumni-list--names{% endif %}">
+      <ul class="ci2-alumni-list">
         {% for a in alist %}
           <li class="ci2-alumni-item">
-            <span class="ci2-alumni-name">{{ a.name }}</span>
-            {% if g == 'thesis' and a.title and a.title != "" %}<span class="ci2-alumni-title">{{ a.title }}</span>{% endif %}
+            <span class="ci2-alumni-name">
+              {% if a.url %}<a href="{{ a.url }}" target="_blank" rel="noopener">{{ a.name }}</a>{% else %}{{ a.name }}{% endif %}
+              {% if a.year %}<span class="ci2-alumni-year">{{ a.year }}</span>{% endif %}
+              {% if a.linkedin %}<a class="ci2-alumni-linkedin" href="{{ a.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>{% endif %}
+            </span>
+            {% if a.title and a.title != "" %}<span class="ci2-alumni-title">{{ a.title }}</span>{% endif %}
           </li>
         {% endfor %}
       </ul>
@@ -116,19 +120,15 @@ nav_order: 3
     border-bottom: 1px solid var(--global-divider-color, #e6e6e6);
   }
   .ci2-alumni-name { font-weight: 600; font-size: 1rem; }
+  .ci2-alumni-name a { color: inherit; text-decoration: none; }
+  .ci2-alumni-name a:hover { color: var(--global-theme-color, #cc0000); text-decoration: underline; }
+  .ci2-alumni-year { font-weight: 400; font-size: 0.8rem; opacity: 0.55; margin-left: 0.4rem; }
+  .ci2-alumni-linkedin {
+    margin-left: 0.45rem; font-size: 0.85rem;
+    color: var(--global-text-color-light, #828282); transition: color 0.15s ease;
+  }
+  .ci2-alumni-linkedin:hover { color: var(--global-theme-color, #cc0000); }
   .ci2-alumni-title { font-size: 0.82rem; opacity: 0.7; line-height: 1.35; margin-top: 0.1rem; }
-
-  /* Names-only list (M.Sc. Project): denser, more columns. Every item is the same
-     height (room for a name that wraps to two lines) and the name is centered, so
-     the dividers stay evenly spaced even when some names are long. */
-  .ci2-alumni-list--names {
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-    gap: 0 2rem;
-  }
-  .ci2-alumni-list--names .ci2-alumni-item {
-    min-height: 3.5rem; padding: 0.4rem 0; justify-content: center;
-  }
-  .ci2-alumni-list--names .ci2-alumni-name { line-height: 1.3; }
 
   @media (max-width: 575px) {
     .ci2-alumni-list { grid-template-columns: 1fr; }

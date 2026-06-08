@@ -22,30 +22,35 @@ phd:
     image: noam.jpg
     email: Noam.Smilovich@ttu.edu
     website: https://noamsmilovich.github.io
+    linkedin: https://www.linkedin.com/in/noam-smilovich
   - name: Tristan Shah
     title: PhD Student
     role: Computer Science
     image: tristan.jpg
     email: trisshah@ttu.edu
-    website:
+    website: https://tristan-shah.github.io
+    linkedin: https://www.linkedin.com/in/tristan-shah-b60283b8/
   - name: Wooyoung Chung
     title: PhD Student
     role: Computer Science
     image: wooyoung.jpg
     email: wochung@ttu.edu
     website:
+    linkedin: https://www.linkedin.com/in/jonathan-chung-0b1b14226/
   - name: Joshua Huang
     title: PhD Student
     role: Computer Science
     image: joshua.jpg
     email: Joshua.Huang@ttu.edu
     website:
+    linkedin: https://www.linkedin.com/in/joshua-huang72/
   - name: Volodymyr Makarenko
     title: PhD Student
     role: Computer Science
     image: volodymyr.jpg
     email: vmakaren@ttu.edu
     website:
+    linkedin: https://www.linkedin.com/in/volodymyr-makarenko-0294ab135/
 
 undergrad:
   - name: Diwash Thapa
@@ -54,3 +59,4 @@ undergrad:
     image: diwash.jpg
     email: Diwthapa@ttu.edu
     website: https://diwashthapa.netlify.app
+    linkedin: https://linkedin.com/in/diwash-thapa95
