@@ -42,14 +42,14 @@ phd:
     role: Computer Science
     image: joshua.jpg
     email: Joshua.Huang@ttu.edu
-    website:
+    website: https://activelively.github.io/
     linkedin: https://www.linkedin.com/in/joshua-huang72/
   - name: Volodymyr Makarenko
     title: PhD Student
     role: Computer Science
     image: volodymyr.jpg
     email: vmakaren@ttu.edu
-    website:
+    website: https://md.vladmak.com
     linkedin: https://www.linkedin.com/in/volodymyr-makarenko-0294ab135/
 
 undergrad:
