@@ -49,6 +49,7 @@ NAME_OVERRIDES = {
 # (overrides the best-effort First-Last flip), plus graduation year and thesis URL.
 # Add more rows as theses are found; projects aren't on ScholarWorks so they have none.
 THESIS_INFO = {
+    "Ankur":          {"name": "Ankur Parmar",     "year": 2023},  # not on ScholarWorks; details from the student
     "Alavi Khan":     {"name": "Alavi Ahmed Khan", "year": 2023, "url": "https://scholarworks.sjsu.edu/etd_theses/5452/"},
     "Phu Nguyen":     {"name": "Phu C. Nguyen",    "year": 2023, "url": "https://scholarworks.sjsu.edu/etd_theses/5466/"},
     "Sharma Suruchi": {"name": "Suruchi Sharma",   "year": 2023, "url": "https://scholarworks.sjsu.edu/etd_theses/5473/"},
@@ -62,6 +63,7 @@ THESIS_INFO = {
 # Public LinkedIn profiles, found via web search and confirmed against SJSU + field.
 # Keyed by raw CSV name. Applies to thesis and project alumni alike.
 ALUMNI_LINKEDIN = {
+    "Ankur":          "https://www.linkedin.com/in/ankur099/",
     "Kaya Ezgi":      "https://www.linkedin.com/in/ezgi-kaya-a6b3a2127/",
     "Mello Paul Jason": "https://www.linkedin.com/in/pauljasonmello",
     "Phu Nguyen":     "https://www.linkedin.com/in/phu-nguyen-560747146/",

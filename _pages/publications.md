@@ -66,7 +66,7 @@ nav_order: 4
   .ci2-pub-media { display: flex; flex-wrap: nowrap; gap: 0.5rem; }
   .ci2-pub-media--pair { flex-direction: column; }  /* multiple videos stack vertically */
   .ci2-pub-media .ci2-pub-video {
-    width: 15rem; height: auto; display: block; background: #000;
+    width: 18rem; height: auto; display: block; background: #000;
     border-radius: 0.5rem; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   }
 
@@ -75,6 +75,6 @@ nav_order: 4
     .publications ol.bibliography > li:has(.ci2-pub-media) {
       flex-direction: column; align-items: stretch; gap: 0.85rem;
     }
-    .ci2-pub-media .ci2-pub-video { width: 100%; max-width: 22rem; }
+    .ci2-pub-media .ci2-pub-video { width: 100%; max-width: 32rem; }
   }
 </style>

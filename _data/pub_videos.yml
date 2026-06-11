@@ -5,6 +5,8 @@
 # Sets alternate margin sides automatically by their order here: the 1st set is
 # on the left, the 2nd on the right, the 3rd left, and so on. A set with a single
 # video renders larger; a set with two renders them side-by-side (so smaller).
+tiomkin2026information:
+  - saltation_3x3_grid
 shah2026multiagent:
   - flock_6
 shah2026controllable:

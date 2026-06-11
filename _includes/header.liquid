@@ -2,9 +2,9 @@
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}{% if page.url == '/' %} ci2-home-navbar{% endif %}" role="navigation">
     <div class="container">
-      {%- comment -%} CI² Lab brand logo — hidden on the home page (the hero already shows it) {%- endcomment -%}
+      {%- comment -%} CI² Lab word-mark — hidden on the home page (the hero already shows it) {%- endcomment -%}
       {% if page.url != '/' %}
-      <a class="navbar-brand ci2-brand" href="{{ '/' | relative_url }}"><img src="{{ '/assets/img/logo-ci2.png' | relative_url }}" alt="CI² Lab" class="ci2-logo-img"></a>
+      <a class="navbar-brand ci2-brand" href="{{ '/' | relative_url }}">CI<sup>2</sup> Lab</a>
       {% endif %}
       <!-- Navbar Toggle -->
       <button
@@ -135,31 +135,30 @@
   /* Bold navigation links */
   .navbar .nav-link { font-weight: 700; }
 
-  /* CI² Lab word-mark brand (large, no logo) */
-  .navbar .ci2-brand {
+  /* CI² Lab word-mark brand (text, no logo image). Selector matches al-folio's own
+     `.navbar.navbar-light .navbar-brand` specificity so our colour wins. */
+  .navbar.navbar-light .ci2-brand {
     font-family: "Roboto Slab", "Roboto", serif;
-    font-weight: 700;
-    font-size: 2.5rem;
-    letter-spacing: 0.01em;
+    font-weight: 800;
+    font-size: 1.9rem;
+    letter-spacing: 0.005em;
     line-height: 1;
     padding-top: 0.15rem;
     padding-bottom: 0.15rem;
+    color: #990000;
   }
+  html[data-theme="dark"] .navbar.navbar-light .ci2-brand { color: #e8473c; }
   .navbar .ci2-brand sup {
-    font-size: 0.6em;
-    top: -0.6em;
-    margin: 0 0.03em;
+    font-size: 0.55em;
+    top: -0.62em;
+    margin: 0 0.02em;
   }
   .navbar .ci2-brand:hover {
     opacity: 0.85;
   }
   @media (min-width: 576px) {
-    .navbar .ci2-brand { font-size: 3.1rem; }
+    .navbar.navbar-light .ci2-brand { font-size: 2.25rem; }
   }
-
-  /* Navbar logo image (hidden on home; shown on other pages) */
-  .navbar .ci2-brand .ci2-logo-img { height: 5rem; width: auto; display: block; }
-  @media (min-width: 576px) { .navbar .ci2-brand .ci2-logo-img { height: 7rem; } }
 
   /* Home page: no brand logo, so center and slightly enlarge the nav tabs */
   .ci2-home-navbar .navbar-collapse-main { justify-content: center; }

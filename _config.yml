@@ -336,8 +336,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Tiomkin, Smilovich, Shah, Chung]
-  first_name: [Stas, Noam, Tristan, Wooyoung]
+  last_name: [Tiomkin, Smilovich, Shah, Chung, Makarenko]
+  first_name: [Stas, Noam, Tristan, "Tristan A.", Wooyoung, Volodymyr]
 
   style: apa
   locale: en
