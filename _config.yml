@@ -9,10 +9,9 @@ last_name: Lab
 contact_note: >
   For prospective students and collaborators: email Dr. Tiomkin with a short note about your background and interests.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  The Computational Intelligence, Control & Information (CI²) Lab at Texas Tech University, led by Dr. Stas Tiomkin — research at the intersection of deep learning, reinforcement learning, control, and information theory for intelligent dynamical systems.
-footer_text: >
-  Department of Computer Science, Texas Tech University.
-keywords: deep learning, reinforcement learning, optimal control, information theory, dynamical systems, robotics, Texas Tech University, CI2 Lab, Stas Tiomkin # add your own keywords or leave empty
+  The Computational Intelligence, Control & Information (CI²) Lab, led by Dr. Stas Tiomkin — research at the intersection of deep learning, reinforcement learning, control, and information theory for intelligent dynamical systems.
+footer_text: # shown after the copyright line in the footer (left empty)
+keywords: deep learning, reinforcement learning, optimal control, information theory, dynamical systems, robotics, CI2 Lab, Stas Tiomkin # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🧠 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
