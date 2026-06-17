@@ -6,9 +6,7 @@ nav: false
 ---
 
 <div class="ci2-home">
-  <p class="ci2-eyebrow">Led by Dr. Stas Tiomkin</p>
   <h1 class="ci2-fullname">Computational Intelligence, Control &amp; Information Lab</h1>
-  <p class="ci2-tagline">AI grounded in Engineering</p>
   <p class="ci2-lede">
     We build agents that learn to perceive, act, and acquire skills in complex physical
     systems — uniting <strong>reinforcement learning</strong>, <strong>control and
@@ -84,7 +82,7 @@ nav: false
      but no longer displayed), with the full lab name, tagline and intro beneath it. */
   .post > .post-header { display: none; }
 
-  .ci2-home { text-align: center; max-width: 60rem; margin: 2.5rem auto 0; }
+  .ci2-home { text-align: center; max-width: 72rem; margin: 2.5rem auto 0; }
 
   .ci2-eyebrow {
     text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.9rem;
@@ -103,8 +101,20 @@ nav: false
 
   .ci2-fullname {
     font-family: "Roboto Slab", serif; font-weight: 600;
-    font-size: clamp(1.2rem, 3vw, 2rem); line-height: 1.25; margin: 0 0 0.6rem;
-    color: var(--global-text-color); text-wrap: balance; opacity: 0.92;
+    font-size: 1.4rem; line-height: 1.2; margin: 0 0 1.5rem;
+    color: var(--global-text-color); opacity: 0.92;
+  }
+  @media (min-width: 768px) { .ci2-fullname { font-size: 1.55rem; } }
+  /* On laptops/desktops the al-folio content column (~1140px) is too narrow to
+     enlarge this long title on one line, so let the headline break out a touch
+     wider than the column and size it with the viewport. Width and font both
+     track vw, so the one-line ratio stays constant and it never wraps here. */
+  @media (min-width: 992px) {
+    .ci2-fullname {
+      width: min(94vw, 78rem);
+      position: relative; left: 50%; transform: translateX(-50%);
+      font-size: clamp(1.7rem, 2.9vw, 2.55rem);
+    }
   }
 
   .ci2-tagline {
