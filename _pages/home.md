@@ -7,7 +7,6 @@ nav: false
 
 <div class="ci2-home">
   <p class="ci2-eyebrow">Led by Dr. Stas Tiomkin</p>
-  <div class="ci2-wordmark" aria-hidden="true">CI<sup>2</sup> Lab</div>
   <h1 class="ci2-fullname">Computational Intelligence, Control &amp; Information Lab</h1>
   <p class="ci2-tagline">AI grounded in Engineering</p>
   <p class="ci2-lede">

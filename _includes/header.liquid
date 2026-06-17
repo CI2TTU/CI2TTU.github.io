@@ -1,11 +1,9 @@
 <header>
   <!-- Nav Bar -->
-  <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}{% if page.url == '/' %} ci2-home-navbar{% endif %}" role="navigation">
+  <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
-      {%- comment -%} CI² Lab word-mark — hidden on the home page (the hero already shows it) {%- endcomment -%}
-      {% if page.url != '/' %}
+      {%- comment -%} CI² Lab word-mark brand — shown on every page, including home {%- endcomment -%}
       <a class="navbar-brand ci2-brand" href="{{ '/' | relative_url }}">CI<sup>2</sup> Lab</a>
-      {% endif %}
       <!-- Navbar Toggle -->
       <button
         class="navbar-toggler collapsed navbar-toggler-main"
@@ -158,12 +156,5 @@
   }
   @media (min-width: 576px) {
     .navbar.navbar-light .ci2-brand { font-size: 2.25rem; }
-  }
-
-  /* Home page: no brand logo, so center and slightly enlarge the nav tabs */
-  .ci2-home-navbar .navbar-collapse-main { justify-content: center; }
-  .ci2-home-navbar .navbar-menu-list { margin-left: 0; }
-  @media (min-width: 576px) {
-    .ci2-home-navbar .navbar-nav .nav-item .nav-link { font-size: 1.18rem; }
   }
 </style>
