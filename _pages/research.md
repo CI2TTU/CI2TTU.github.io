@@ -88,7 +88,7 @@ with <strong>intrinsic motivation</strong> as a recurring thread.
   .ci2-rhero {
     width: 100vw; position: relative; left: 50%; margin-left: -50vw; margin-top: 0.5rem;
     min-height: clamp(280px, 37vh, 410px);
-    display: flex; align-items: center; justify-content: center;
+    display: flex; align-items: flex-end; justify-content: flex-end;
     background-image: url('{{ '/assets/img/hero-coffee.jpg' | relative_url }}');
     background-size: cover; background-position: center 42%;
   }
@@ -96,10 +96,10 @@ with <strong>intrinsic motivation</strong> as a recurring thread.
     content: ""; position: absolute; inset: 0;
     background: linear-gradient(180deg, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0.52) 100%);
   }
-  .ci2-rhero__inner { position: relative; z-index: 1; text-align: center; padding: 1.6rem 1.5rem; max-width: 52rem; }
+  .ci2-rhero__inner { position: relative; z-index: 1; text-align: right; padding: 1.4rem 2.25rem 1.5rem; max-width: 52rem; }
   .ci2-rhero__quote {
     font-family: "Roboto Slab", serif; font-style: italic; font-weight: 600; color: #fff; margin: 0;
-    font-size: clamp(1.3rem, 2.6vw, 2.1rem); line-height: 1.35; text-wrap: balance;
+    font-size: clamp(1rem, 1.7vw, 1.5rem); line-height: 1.45; text-wrap: balance;
     text-shadow: 0 2px 16px rgba(0,0,0,0.55);
   }
   .ci2-rhero__cap { color: #fff; opacity: 0.9; margin: 0.8rem 0 0; font-size: 1rem; letter-spacing: 0.02em; }
