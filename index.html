@@ -52,7 +52,7 @@
     width: 100vw; position: relative; left: 50%; margin-left: -50vw; margin-top: -1.5rem;
     /* match the photo's aspect so the whole crop shows (no further cropping) */
     aspect-ratio: 3158 / 990; min-height: 200px; max-height: 470px;
-    display: flex; align-items: center; justify-content: center;
+    display: flex; align-items: flex-end; justify-content: flex-end;
     background-image: url('/assets/img/hero-maze.jpg');
     background-size: cover; background-position: center;
   }
@@ -63,7 +63,7 @@
   html[data-theme="dark"] .ci2-hero::before {
     background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.58) 100%);
   }
-  .ci2-hero__inner { position: relative; z-index: 1; text-align: center; padding: 1.6rem 1rem; max-width: 82rem; }
+  .ci2-hero__inner { position: relative; z-index: 1; text-align: right; padding: 1.4rem 2.25rem 1.5rem; max-width: 66rem; }
   .ci2-hero__quote {
     font-family: "Roboto Slab", serif; font-style: italic; font-weight: 600; color: #fff; margin: 0;
     font-size: clamp(1rem, 1.7vw, 1.5rem); line-height: 1.45;
