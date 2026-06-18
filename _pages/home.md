@@ -7,7 +7,7 @@ nav: false
 
 <section class="ci2-hero" aria-label="Lab motto">
   <div class="ci2-hero__inner">
-    <p class="ci2-hero__quote">We shall not cease from exploration, and the end of all our exploring<br class="ci2-hero__br" />will be to arrive where we started and know the place for the first time.</p>
+    <p class="ci2-hero__quote">&ldquo;We shall not cease from exploration, and the end of all our exploring<br class="ci2-hero__br" />will be to arrive where we started and know the place for the first time.&rdquo;</p>
     <p class="ci2-hero__cap">&mdash; T. S. Eliot</p>
   </div>
 </section>
