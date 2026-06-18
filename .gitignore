@@ -22,3 +22,9 @@ CVSep2025.pdf
 
 # Hero image previews (not for commit)
 hero-options/
+
+# Source photos kept locally but not committed/deployed (HEIC originals +
+# full-size source crop; the optimized hero-maze.jpg is what ships)
+assets/img/*.HEIC
+assets/img/*.heic
+assets/img/stone_maze.jpg

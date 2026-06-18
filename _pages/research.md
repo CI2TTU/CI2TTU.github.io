@@ -6,6 +6,13 @@ nav: true
 nav_order: 2
 ---
 
+<section class="ci2-rhero" aria-label="">
+  <div class="ci2-rhero__inner">
+    <p class="ci2-rhero__quote">&ldquo;A mathematician is a device for turning coffee into theorems.&rdquo;</p>
+    <p class="ci2-rhero__cap">&mdash; Alfréd Rényi</p>
+  </div>
+</section>
+
 <div class="ci2-research">
 
 <p class="ci2-research-intro">
@@ -77,7 +84,27 @@ with <strong>intrinsic motivation</strong> as a recurring thread.
 </div>
 
 <style>
-  .ci2-research { max-width: 48rem; margin: 0 auto; }
+  /* Coffee hero with the "coffee → theorems" epigraph */
+  .ci2-rhero {
+    width: 100vw; position: relative; left: 50%; margin-left: -50vw; margin-top: 0.5rem;
+    min-height: clamp(280px, 37vh, 410px);
+    display: flex; align-items: center; justify-content: center;
+    background-image: url('{{ '/assets/img/hero-coffee.jpg' | relative_url }}');
+    background-size: cover; background-position: center 42%;
+  }
+  .ci2-rhero::before {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0.52) 100%);
+  }
+  .ci2-rhero__inner { position: relative; z-index: 1; text-align: center; padding: 1.6rem 1.5rem; max-width: 52rem; }
+  .ci2-rhero__quote {
+    font-family: "Roboto Slab", serif; font-style: italic; font-weight: 600; color: #fff; margin: 0;
+    font-size: clamp(1.3rem, 2.6vw, 2.1rem); line-height: 1.35; text-wrap: balance;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.55);
+  }
+  .ci2-rhero__cap { color: #fff; opacity: 0.9; margin: 0.8rem 0 0; font-size: 1rem; letter-spacing: 0.02em; }
+
+  .ci2-research { max-width: 48rem; margin: 2.5rem auto 0; }
   .ci2-research-intro { font-size: 1.12rem; line-height: 1.7; opacity: 0.9; margin-bottom: 2.25rem; }
 
   .ci2-research-area { margin-bottom: 2.25rem; }

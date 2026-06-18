@@ -5,6 +5,13 @@ title: Home
 nav: false
 ---
 
+<section class="ci2-hero" aria-label="Lab motto">
+  <div class="ci2-hero__inner">
+    <p class="ci2-hero__quote">We shall not cease from exploration, and the end of all our exploring<br class="ci2-hero__br" />will be to arrive where we started and know the place for the first time.</p>
+    <p class="ci2-hero__cap">&mdash; T. S. Eliot</p>
+  </div>
+</section>
+
 <div class="ci2-home">
   <h1 class="ci2-fullname">Computational Intelligence, Control &amp; Information Lab</h1>
   <p class="ci2-lede">
@@ -78,26 +85,35 @@ nav: false
 </section>
 
 <style>
-  /* Home: a typographic "CI² Lab" wordmark (the old logo image is kept in the repo
-     but no longer displayed), with the full lab name, tagline and intro beneath it. */
   .post > .post-header { display: none; }
 
-  .ci2-home { text-align: center; max-width: 72rem; margin: 2.5rem auto 0; }
+  /* Stone-maze hero with an overlaid epigraph */
+  .ci2-hero {
+    width: 100vw; position: relative; left: 50%; margin-left: -50vw; margin-top: -1.5rem;
+    /* match the photo's aspect so the whole crop shows (no further cropping) */
+    aspect-ratio: 3158 / 990; min-height: 200px; max-height: 470px;
+    display: flex; align-items: center; justify-content: center;
+    background-image: url('{{ '/assets/img/hero-maze.jpg' | relative_url }}');
+    background-size: cover; background-position: center;
+  }
+  .ci2-hero::before {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.42) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.56) 100%);
+  }
+  html[data-theme="dark"] .ci2-hero::before {
+    background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.58) 100%);
+  }
+  .ci2-hero__inner { position: relative; z-index: 1; text-align: center; padding: 1.6rem 1rem; max-width: 82rem; }
+  .ci2-hero__quote {
+    font-family: "Roboto Slab", serif; font-style: italic; font-weight: 600; color: #fff; margin: 0;
+    font-size: clamp(1rem, 1.7vw, 1.5rem); line-height: 1.45;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.55);
+  }
+  .ci2-hero__cap { color: #fff; opacity: 0.9; margin: 0.85rem 0 0; font-size: 1rem; letter-spacing: 0.02em; }
+  /* On phones the line is too long for the forced two-line split, so let it flow */
+  @media (max-width: 700px) { .ci2-hero__br { display: none; } }
 
-  .ci2-eyebrow {
-    text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.9rem;
-    font-weight: 600; opacity: 0.8; margin-bottom: 1.25rem; color: var(--global-text-color);
-  }
-
-  .ci2-wordmark {
-    font-family: "Roboto Slab", serif; font-weight: 800;
-    font-size: clamp(4rem, 15vw, 10.5rem); line-height: 1; letter-spacing: 0.005em;
-    margin: 0 0 0.7rem; color: #990000;
-  }
-  html[data-theme="dark"] .ci2-wordmark { color: #e8473c; }
-  .ci2-wordmark sup {
-    font-size: 0.5em; top: -0.9em; margin-left: 0.02em;
-  }
+  .ci2-home { text-align: center; max-width: 72rem; margin: 2.25rem auto 0; }
 
   .ci2-fullname {
     font-family: "Roboto Slab", serif; font-weight: 600;
@@ -105,10 +121,8 @@ nav: false
     color: var(--global-text-color); opacity: 0.92;
   }
   @media (min-width: 768px) { .ci2-fullname { font-size: 1.55rem; } }
-  /* On laptops/desktops the al-folio content column (~1140px) is too narrow to
-     enlarge this long title on one line, so let the headline break out a touch
-     wider than the column and size it with the viewport. Width and font both
-     track vw, so the one-line ratio stays constant and it never wraps here. */
+  /* The al-folio content column (~1140px) is too narrow to enlarge this long title
+     on one line, so let it break out a touch wider and size with the viewport. */
   @media (min-width: 992px) {
     .ci2-fullname {
       width: min(94vw, 78rem);
@@ -116,13 +130,6 @@ nav: false
       font-size: clamp(1.7rem, 2.9vw, 2.55rem);
     }
   }
-
-  .ci2-tagline {
-    font-family: "Roboto Slab", serif; font-weight: 600; font-style: italic;
-    font-size: clamp(1.05rem, 2.4vw, 1.5rem); letter-spacing: 0.01em;
-    margin: 0 0 1.5rem; color: #990000;
-  }
-  html[data-theme="dark"] .ci2-tagline { color: #e8473c; }
 
   .ci2-lede {
     font-size: 1.25rem; line-height: 1.65; max-width: 44rem; margin: 0 auto;
@@ -182,9 +189,7 @@ nav: false
     display: flex; align-items: center; justify-content: center;
     gap: 3rem; flex-wrap: wrap;
   }
-  .ci2-support-item {
-    display: inline-flex; align-items: center; justify-content: center;
-  }
+  .ci2-support-item { display: inline-flex; align-items: center; justify-content: center; }
   .ci2-support-logos img { width: auto; display: block; }
   .ci2-logo-nsf { height: 116px; }
   .ci2-logo-pazy { height: 108px; }
@@ -195,9 +200,7 @@ nav: false
   }
 
   @media (max-width: 575px) {
-    .ci2-eyebrow { font-size: 0.72rem; letter-spacing: 0.08em; }
     .ci2-fullname { font-size: 1.1rem; }
-    .ci2-tagline { font-size: 1rem; }
     .ci2-lede { font-size: 1.05rem; }
     .ci2-support-logos { gap: 2rem; }
     .ci2-logo-nsf { height: 84px; }
