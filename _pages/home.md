@@ -5,13 +5,6 @@ title: Home
 nav: false
 ---
 
-<section class="ci2-hero" aria-label="Lab motto">
-  <div class="ci2-hero__inner">
-    <p class="ci2-hero__quote">&ldquo;We shall not cease from exploration, and the end of all our exploring<br class="ci2-hero__br" />will be to arrive where we started and know the place for the first time.&rdquo;</p>
-    <p class="ci2-hero__cap">&mdash; T. S. Eliot</p>
-  </div>
-</section>
-
 <div class="ci2-home">
   <h1 class="ci2-fullname">Computational Intelligence, Control &amp; Information Lab</h1>
   <p class="ci2-lede">
@@ -86,32 +79,6 @@ nav: false
 
 <style>
   .post > .post-header { display: none; }
-
-  /* Stone-maze hero with an overlaid epigraph */
-  .ci2-hero {
-    width: 100vw; position: relative; left: 50%; margin-left: -50vw; margin-top: -1.5rem;
-    /* match the photo's aspect so the whole crop shows (no further cropping) */
-    aspect-ratio: 3158 / 990; min-height: 200px; max-height: 470px;
-    display: flex; align-items: flex-end; justify-content: flex-end;
-    background-image: url('{{ '/assets/img/hero-maze.jpg' | relative_url }}');
-    background-size: cover; background-position: center;
-  }
-  .ci2-hero::before {
-    content: ""; position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0.42) 0%, rgba(0,0,0,0.5) 60%, rgba(0,0,0,0.56) 100%);
-  }
-  html[data-theme="dark"] .ci2-hero::before {
-    background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.58) 100%);
-  }
-  .ci2-hero__inner { position: relative; z-index: 1; text-align: right; padding: 1.4rem 2.25rem 1.5rem; max-width: 66rem; }
-  .ci2-hero__quote {
-    font-family: "Roboto Slab", serif; font-style: italic; font-weight: 600; color: #fff; margin: 0;
-    font-size: clamp(1rem, 1.7vw, 1.5rem); line-height: 1.45;
-    text-shadow: 0 2px 16px rgba(0,0,0,0.55);
-  }
-  .ci2-hero__cap { color: #fff; opacity: 0.9; margin: 0.85rem 0 0; font-size: 1rem; letter-spacing: 0.02em; }
-  /* On phones the line is too long for the forced two-line split, so let it flow */
-  @media (max-width: 700px) { .ci2-hero__br { display: none; } }
 
   .ci2-home { text-align: center; max-width: 72rem; margin: 2.25rem auto 0; }
 

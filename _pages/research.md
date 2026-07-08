@@ -6,12 +6,15 @@ nav: true
 nav_order: 2
 ---
 
-<section class="ci2-rhero" aria-label="">
-  <div class="ci2-rhero__inner">
-    <p class="ci2-rhero__quote">&ldquo;A mathematician is a device for turning coffee into theorems.&rdquo;</p>
-    <p class="ci2-rhero__cap">&mdash; Alfréd Rényi</p>
+<div class="ci2-research-epi">
+  <img class="ci2-research-epi__img" src="{{ '/assets/img/hero-coffee.jpg' | relative_url }}" alt="">
+  <div class="ci2-research-epi__text">
+    <p class="ci2-research-epi__q">&ldquo;A mathematician is a device for turning coffee into theorems.&rdquo;</p>
+    <p class="ci2-research-epi__a">&mdash; Alfréd Rényi</p>
   </div>
-</section>
+</div>
+
+<h1 class="post-title ci2-research-title">Research</h1>
 
 <div class="ci2-research">
 
@@ -24,9 +27,9 @@ with <strong>intrinsic motivation</strong> as a recurring thread.
 <section class="ci2-research-area">
   <h2>Intrinsic Motivation &amp; Empowerment</h2>
   <p>
-  Information-theoretic objectives — empowerment, channel capacity, and the value of information —
-  that drive agents to discover useful, generalizable behavior without hand-engineered rewards,
-  including intrinsic motivation realized through deep reinforcement learning.
+  Information-theoretic objectives — empowerment, curiosity, information production — that drive
+  agents to discover useful, generalizable behavior without human-engineered rewards. We explore
+  these objectives using both classical control methods and modern learning-based algorithms.
   </p>
 </section>
 
@@ -84,29 +87,38 @@ with <strong>intrinsic motivation</strong> as a recurring thread.
 </div>
 
 <style>
-  /* Coffee hero with the "coffee → theorems" epigraph */
-  .ci2-rhero {
-    width: 100vw; position: relative; left: 50%; margin-left: -50vw; margin-top: 0.5rem;
-    min-height: clamp(280px, 37vh, 410px);
-    display: flex; align-items: flex-end; justify-content: flex-end;
-    background-image: url('{{ '/assets/img/hero-coffee.jpg' | relative_url }}');
-    background-size: cover; background-position: center 42%;
-  }
-  .ci2-rhero::before {
-    content: ""; position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0.52) 100%);
-  }
-  .ci2-rhero__inner { position: relative; z-index: 1; text-align: right; padding: 1.4rem 2.25rem 1.5rem; max-width: 52rem; }
-  .ci2-rhero__quote {
-    font-family: "Roboto Slab", serif; font-style: italic; font-weight: 600; color: #fff; margin: 0;
-    font-size: clamp(1rem, 1.7vw, 1.5rem); line-height: 1.45; text-wrap: balance;
-    text-shadow: 0 2px 16px rgba(0,0,0,0.55);
-  }
-  .ci2-rhero__cap { color: #fff; opacity: 0.9; margin: 0.8rem 0 0; font-size: 1rem; letter-spacing: 0.02em; }
+  /* Our own centered title (hide al-folio's default left-aligned one) */
+  .post > .post-header { display: none; }
+  /* match the default page-title styling used on the other tabs (People, etc.) */
+  .ci2-research-title { margin-bottom: 1.5rem; }
 
-  .ci2-research { max-width: 48rem; margin: 2.5rem auto 0; }
+  /* Epigraph: round coffee inset to the LEFT of a single-line quote, above the title */
+  .ci2-research-epi {
+    display: flex; align-items: center; justify-content: flex-start; gap: 1.4rem;
+    margin: 0.75rem 0 1.6rem;
+  }
+  .ci2-research-epi__img {
+    width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: center 40%;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2); flex: none;
+  }
+  .ci2-research-epi__text { text-align: left; }
+  .ci2-research-epi__q {
+    font-family: "Roboto Slab", serif; font-style: italic; font-weight: 500;
+    font-size: clamp(0.9rem, 1.75vw, 1.25rem); line-height: 1.4; margin: 0;
+    white-space: nowrap; color: var(--global-text-color);
+  }
+  .ci2-research-epi__a {
+    font-size: 0.83rem; opacity: 0.58; margin: 0.35rem 0 0; letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  /* On phones the line is too long — stack the circle above and let the quote wrap */
+  @media (max-width: 720px) {
+    .ci2-research-epi { flex-direction: column; gap: 1rem; }
+    .ci2-research-epi__text { text-align: center; }
+    .ci2-research-epi__q { white-space: normal; }
+  }
+
+  .ci2-research { max-width: 48rem; margin: 0 auto; }
   .ci2-research-intro { font-size: 1.12rem; line-height: 1.7; opacity: 0.9; margin-bottom: 2.25rem; }
-
   .ci2-research-area { margin-bottom: 2.25rem; }
   .ci2-research-area h2 {
     font-family: "Roboto Slab", serif; font-weight: 700; font-size: 1.5rem; margin: 0 0 0.6rem;

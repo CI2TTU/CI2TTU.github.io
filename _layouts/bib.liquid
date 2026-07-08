@@ -10,7 +10,7 @@
             {% assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' %}
           {%- endif -%}
           <abbr
-            class="badge rounded w-100"
+            class="badge rounded ci2-venue-badge"
             {% if venue_style %}
               {{ venue_style }}
             {% endif -%}
@@ -22,7 +22,7 @@
             {% endif %}
           </abbr>
         {% else %}
-          <abbr class="badge rounded w-100">{{ entry.abbr }}</abbr>
+          <abbr class="badge rounded ci2-venue-badge">{{ entry.abbr }}</abbr>
         {% endif %}
       {% endif %}
       {%- comment -%} links relocated under the venue badge {%- endcomment -%}
@@ -234,6 +234,13 @@
       {% capture entrytype %}<em>In {{ entry.booktitle }}</em>{% endcapture %}
     {% elsif thesis contains entry.type %}
       {% capture entrytype %}<em>{{ entry.school }}</em>{% endcapture %}
+    {% elsif entry.preprint %}
+      {%- comment -%} Preprints: name the venue line so the year never floats alone {%- endcomment -%}
+      {% if entry.arxiv %}
+        {% capture entrytype %}<em>arXiv preprint</em>{% endcapture %}
+      {% else %}
+        {% capture entrytype %}<em>Preprint</em>{% endcapture %}
+      {% endif %}
     {% else %}
       {% capture entrytype %}{% endcapture %}
     {% endif %}
@@ -248,9 +255,6 @@
     {% if entry.location %}
       {% capture entrytype %}{{ entrytype }}{{ ", " }}{{ entry.location }}{% endcapture %}
     {% endif -%}
-    {% if entry.additional_info %}
-      {% capture entrytype %}{{ entrytype }}{{ entry.additional_info | markdownify | remove: '<p>' | remove: '</p>' }}{% endcapture %}
-    {% endif %}
     {% capture hook_exists %}{% file_exists _includes/hook/bib.liquid %}{% endcapture %}
     {% if hook_exists == 'true' %}
       {% include hook/bib.liquid %}
@@ -260,6 +264,10 @@
     <div class="periodical">
       {{ periodical | strip }}
     </div>
+    {% if entry.additional_info %}
+      {%- comment -%} Accolades/highlights on their own line, not glued to the venue {%- endcomment -%}
+      <div class="ci2-pub-note">{{ entry.additional_info | markdownify | remove: '<p>' | remove: '</p>' | strip }}</div>
+    {% endif %}
     <div class="periodical">
       {{ entry.note | strip }}
     </div>
