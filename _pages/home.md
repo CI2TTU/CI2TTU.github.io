@@ -74,6 +74,11 @@ nav: false
       <img class="ci2-logo-ail" src="{{ '/assets/img/nissan-logo.png' | relative_url }}"
            alt="Alliance Innovation Lab — Silicon Valley (Renault–Nissan–Mitsubishi)" loading="lazy" />
     </a>
+    <a class="ci2-support-item" href="https://www.gm.com/" target="_blank" rel="noopener"
+       aria-label="General Motors">
+      <img class="ci2-logo-gm" src="{{ '/assets/img/gm-logo.png' | relative_url }}"
+           alt="General Motors" loading="lazy" />
+    </a>
   </div>
 </section>
 
@@ -161,6 +166,7 @@ nav: false
   .ci2-logo-nsf { height: 116px; }
   .ci2-logo-pazy { height: 108px; }
   .ci2-logo-ail { height: 80px; }
+  .ci2-logo-gm { height: 80px; }
   /* In dark mode the full-color logos sit on a white chip so brand colors stay legible */
   html[data-theme="dark"] .ci2-support-logos img {
     background: #ffffff; padding: 0.4rem 0.6rem; border-radius: 0.5rem;
@@ -173,6 +179,7 @@ nav: false
     .ci2-logo-nsf { height: 84px; }
     .ci2-logo-pazy { height: 78px; }
     .ci2-logo-ail { height: 58px; }
+    .ci2-logo-gm { height: 60px; }
   }
 </style>
 
